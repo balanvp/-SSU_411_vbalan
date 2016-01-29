@@ -19,7 +19,7 @@ public class Month
                 quantity++;
             }
         }
-        System.out.println("?????: " + quantity);
+        System.out.println("??????????: " + quantity);
     }
 
     public static void main(String[] args)
