@@ -6,11 +6,12 @@ import java.util.Scanner;
 
 public class Month
 {
-    public static void res(int month)
+    public static void res(int y)
     {
-        int quantity = 0;
+
         Calendar calendar = Calendar.getInstance();
-        calendar.set(calendar.MONTH, month);
+        calendar.set(calendar.MONTH, y);
+        int quantity = 0;
         for(int i=1800; i<=2015; i++)
         {
             calendar.set(calendar.YEAR, i);
@@ -31,9 +32,9 @@ public class Month
         String sc = scanner.nextLine();
         try
         {
-            int month = Integer.parseInt(sc);
-            if (month >= 0 && month <= 11)
-                res(month);
+            int y = Integer.parseInt(sc);
+            if (y >= 0 && y <= 11)
+                res(y);
             else
                 System.err.println("ERROR введите месяц из диапозона");
         }
