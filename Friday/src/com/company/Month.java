@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -19,13 +21,13 @@ public class Month
                 quantity++;
             }
         }
-        System.out.println("??????????: " + quantity);
+        System.out.println("Количество: " + quantity);
     }
 
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("??????? ?????: ");
+        System.out.println("Введите месяц: ");
         String sc = scanner.nextLine();
         try
         {
@@ -33,11 +35,11 @@ public class Month
             if (month >= 0 && month <= 11)
                 res(month);
             else
-                System.err.println("ERROR ??????? ????? ?? ?????????");
+                System.err.println("ERROR введите месяц из диапозона");
         }
         catch (NumberFormatException e)
         {
-            System.err.println("???????????");
+            System.err.println("Неправильно");
         }
     }
 }
